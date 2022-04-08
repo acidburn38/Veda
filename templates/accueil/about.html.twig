@@ -1,0 +1,111 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<!-- ----------------------ABOUT BANNER------------------------- -->
+
+<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image: url({{ asset('./assets/images/bg4.jpg') }});">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1>About Us</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+    <!-- ----------------------ABOUT TEXT------------------------- -->
+	
+	<div id="fh5co-about">
+		<div class="container">
+			<div class="about-content">
+				<div class="row animate-box">
+					<div class="col-md-6">
+						<div class="desc">
+							<h3>Company History</h3>
+							<p>Veda makes natural soap inspired by Ayurveda practice in the beautifull city of Brussels.
+							In our workshop, we produce on a small scale with fair trade products and materials, without 
+							the use of palm oil and packaged free of plastic.
+							We use as many residual flows as possible for our circular care products and work closely with 
+							other small producers who supply herbs, aloe vera juice, honey and goat's milk. 
+							In this way we can really contribute to our immediate environment.</p> 
+						</div>
+						<div class="desc">
+							<h3>Mission &amp; Vission</h3>
+							<p>Veda produces artisanal soap with respect for people, animals and the environment to nourish 
+							body and mind.
+							Veda's soaps contain (with the exception of the synthetic caustic soda required for the 
+							saponification process) only natural ingredients and as much as possible from circular waste flows 
+							and organic and/or sustainable cultivation. Hard soap is a plastic-free and environmentally friendly 
+							alternative to liquid hand soaps and shower gels. So no harmful substances are washed away through 
+							the shower drain. Veda also does not use palm oil, as its production has led to massive deforestation. 
+							We sell leftover pieces from our soap production, the soap butts, as a sample set, the perfect way to 
+							get acquainted with our soap.<br>
+							Our strength lies in the combination of sustainable, circular working and high quality.</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<img class="img-responsive" src="{{ asset('./assets/images/bg8.jpg') }}" alt="about">
+					</div>
+				</div>
+			</div>
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<span>Productive Staff</span>
+					<h2>Meet Our Team</h2>
+					<p>Proudly hand made by them.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-4 animate-box" data-animate-effect="fadeIn">
+					<div class="fh5co-staff">
+						    <img src="{{ asset('./assets/images/laure.jpg') }}">   
+						<h3>Patti</h3>
+						<strong class="role">Co-Owner</strong>
+						<p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci.</p>
+						<ul class="fh5co-social-icons">
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+							<li><a href="#"><i class="icon-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 animate-box" data-animate-effect="fadeIn">
+					<div class="fh5co-staff">
+						<img src="{{ asset('./assets/images/laure.jpg') }}">  
+						<h3>Laure</h3>
+						<strong class="role">Chief Executive Officer</strong>
+						<p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci.</p>
+						<ul class="fh5co-social-icons">
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+							<li><a href="#"><i class="icon-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 animate-box" data-animate-effect="fadeIn">
+					<div class="fh5co-staff">
+						<img src="{{ asset('./assets/images/laure.jpg') }}">  
+						<h3>Choco</h3>
+						<strong class="role">Co-Owner</strong>
+						<p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci.</p>
+						<ul class="fh5co-social-icons">
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+							<li><a href="#"><i class="icon-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

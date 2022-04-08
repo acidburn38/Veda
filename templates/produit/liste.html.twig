@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<!-- ----------------------PRODUCT BANNER------------------------- -->
+
+<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image: url({{ asset('./assets/images/bg6.jpg') }});">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1>Product</h1>
+							{# <h2>#</a></h2> #}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- ----------------------PRODUCT LIST------------------------- -->
+
+	<div id="fh5co-product">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<span>Cool Stuff</span>
+					<h2>Products.</h2>
+					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+				</div>
+			</div>
+			<div class="row">
+
+            {% for produit in produits %}
+            
+				<div class="col-md-4 text-center animate-box">
+					<div class="product">
+						<div class="product-grid" style="background-image:url({{ asset('./assets/images/' ~ produit.photo) }});">
+                        	<div class="inner">
+								<p>
+									{# <a href="{{path('basket-add-product',{'id' : produit.id})}}" class="icon"><i class="icon-shopping-cart"></i></a> #}
+									<a href="{{path('product-detail',{'id' : produit.id})}}" class="icon"><i class="icon-eye"></i></a>
+								</p>
+							</div>
+						</div>
+						<div class="desc">
+							<h3><a href="{{path('product-detail',{'id' : produit.id})}}">{{ produit.titre}}</a></h3>
+							<span class="price">{{ produit.prix}}€</span>
+						</div>
+					</div>
+				</div>
+
+			{% endfor %}
+
+			</div>
+			
+		</div>
+	</div>
+{# {{ dump (produits) }} #}
+    {# <br>
+    {{ produit.titre }},
+    {{ produit.reference }},  
+    <img src="{{ asset ('./assets/images/' ~ produit.photo) }}">   
+    {{ produit.description }},      
+    {{ produit.prix}},
+    {{ produit.odeur}},
+    {{ produit.couleur}},
+    <br> #}
+    {# {{ produit.description | default ("pas de description")}}
+    <br><br> #}
+{% endblock %}

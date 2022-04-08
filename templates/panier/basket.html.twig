@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="fh5co-about">
+		<div class="container">
+			<div class="about-content">
+				<div class="row animate-box">
+                    <h3>Basket</h3>
+                
+                    <table class="table">
+                        <tr>
+                            <th>Produit</th>
+                            <th>Photo</th>
+                            <th>Prix</th>
+                            <th>Quantité</th>
+                            <th>Total</th>
+                            <th>Actions</th>
+                        </tr>
+                
+                            {% for detail in panierCommande.detailCommande %}
+                                <tr>
+                                    <td>{{ detail.produit.titre }}</td>
+                                    <td><img src="{{ asset('./assets/images/' ~ detail.produit.photo) }}" style="width:5rem"></td>
+                                    <td class="text-end">{{ detail.produit.prix }} €</td>
+                                    <td>{{ detail.quantite }}</td>
+                                    <td class="text-end">{{ detail.quantite * detail.produit.prix }} €</td>
+                                    <td>
+                                        <a href="{{path("basket-add-detail-product", {'id': detail.produit.id})}}" class="btn btn-success">
+                                            <i class="bi bi-cart-plus">+</i>
+                                        </a>
+                                        <a href="{{path("basket-remove-detail-product", {'id': detail.produit.id})}}" class="btn btn-warning">
+                                            <i class="bi bi-cart-dash">-</i>
+                                        </a>
+                                        <a href="{{path("basket-delete-product", {'id': detail.produit.id})}}" class="btn btn-danger">
+                                            <i class="bi bi-cart-x">Delete</i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% else %}
+                                <tr>
+                                    <td colspan="5" class="text-center">Votre panier est vide</td>
+                                </tr>
+                        
+                            {% endfor %}
+                    </table>
+                    <h4>Total: {{ panierCommande.total }} €</h4>
+                    <a href="{{ path ('order') }}"><input class="btn btn-primary btn-outline btn-lg btn btn-success" type="submit" value="Validate"></a>
+                   <a href="{{ path ('product') }}"><input class="btn btn-primary btn-outline btn-lg" type="submit" value="Back to shop"></a>
+    			</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
