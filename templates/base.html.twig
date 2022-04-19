@@ -108,6 +108,11 @@
 									</div>
 								</li>
 								<li class="shopping-cart"><a href="{{path('basket')}}" class="cart"><span><small>0</small><i class="icon-shopping-cart"></i></span></a></li>
+								<li style="font-family: inherit; color:#d1c286;">
+								{% if app.user %}
+								Welcome {{ app.user.userIdentifier }}
+								{% endif %}
+								</li>
 							</ul>	
 						</div>
 					</div>

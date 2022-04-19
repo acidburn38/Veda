@@ -33,15 +33,15 @@ class PanierController extends AbstractController
         $panierCommande = $session->get('panierCommande', new Commande()); 
         
         $detail = new DetailCommande();
-        // dump($panierCommande);
-        // dd ($panierCommande->getDetailCommande());
+        
+        $produit = $repProduit->find($id);
+        
+        $produit->addDetailCommande($detail);
 
-        $detail->setProduit($repProduit->find($id));
         $detail->setQuantite($quantite); 
-        
-        $panierCommande->addDetailCommande($detail);   
-        //dd($detail);
-        
+      
+        $panierCommande->addDetailCommande($detail);     
+
         $session->set('panierCommande', $panierCommande);
         return $this->redirectToRoute('basket');
     }
